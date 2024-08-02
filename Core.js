@@ -247,6 +247,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isMob = [ ...global.mob].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isHamada = [ ...global.hamada].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isHkl = [ ...global.hkl].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) 
+    const isMaz = [ ...global.maz].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) 
     const isIssam = [ ...global.issam].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isIssamm = [ ...global.issamm].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isIssammm = [...global.issammm].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -1782,6 +1783,19 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
    const random = typ[Math.floor(Math.random() * typ.length)];
    reply(random)
   }
+
+
+   if (smallinput.includes('نا مازن') || smallinput.includes('دا مازن') || smallinput.includes('مازن')) {
+    if(isMaz) {
+   const typ = ['برضو بتشيلو',
+		'مازن يا مازن اختو ليك ورا المخازن اسكت قبل ما اجي اركبك',
+	       'تشرفنا يا مازن..دا حمودي قال داير يتعرف عليك🍆'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+   reply(random)
+   const safi = fs.readFileSync('./system/STK-20240707-WA0175.webp')
+    A17.sendMessage(from, { sticker: safi });
+    }
+ }  
 
 
     if (smallinput.includes('كسم')) {
@@ -7147,14 +7161,13 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://graph.org/file/82b079488d8eb91c5b45a.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        buffer2 = await getBuffer("https://graph.org/file/82b079488d8eb91c5b45a.jpg");
+        buffer2 = await getBuffer("https://graph.org/file/3ca8662eda3a5e4c74dab.jpg");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
 	bufferr = await getBuffer(`https://raw.githubusercontent.com/FortOfFans/HSR/main/ascension/1001_March 7th.png`)
         A17.sendMessage(from, { image: bufferr, caption: 'ْ'}, { quoted: m })
         bufferr2 = await getBuffer("https://raw.githubusercontent.com/FortOfFans/HSR/main/ascension/1224_March 7th.png");
         A17.sendMessage(from, { image: bufferr2, caption: 'ْ' }, { quoted: m });
-         
-        break
+            break
 
 
        case 'ناتاشا':
