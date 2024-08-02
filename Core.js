@@ -6202,10 +6202,10 @@ break;
     if (isBanChat) return reply(mess.bangc);
     A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
     if (!text) return reply("Please provide a search term!\n\n*Example:* ${prefix}stickers frieren");
-    const typ = ['808693688ecc695293359089', '2e0da1f78d1721134b21816d', '902c3bc9d8c08b0dcf8f5373', '85faf717d0545d14074659ad'];
-    const api = typ[Math.floor(Math.random() * typ.length)];    
+ //    const typ = ['808693688ecc695293359089', '2e0da1f78d1721134b21816d', '902c3bc9d8c08b0dcf8f5373', '85faf717d0545d14074659ad'];
+ //   const api = typ[Math.floor(Math.random() * typ.length)];    
 
-    const tawfik = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=${api}&query=${encodeURIComponent(q)}`);
+    const tawfik = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDiosV2&query=${encodeURIComponent(q)}`);
     reply(mess.waiting);
     const results = tawfik.data.result;
 
@@ -8417,8 +8417,9 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
      case 'menggoda':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
+	if (!isTawfik && !isCreator) return reply(`المحتوى لو سمحت `)
         A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://api.lolhuman.xyz/api/danbooru?apikey=Gata_Dios&query=prinz_eugen_(azur_lane)`)
+        buffer = await getBuffer(`https://api.lolhuman.xyz/api/danbooru?apikey=GataDiosV2&query=prinz_eugen_(azur_lane)`)
         A17.sendMessage(from, { image: buffer, caption: ':q 💦 '}, { quoted: m })
         break;
 
