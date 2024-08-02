@@ -7151,7 +7151,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
 	bufferr = await getBuffer(`https://raw.githubusercontent.com/FortOfFans/HSR/main/ascension/1001_March 7th.png`)
         A17.sendMessage(from, { image: bufferr, caption: 'ْ'}, { quoted: m })
-        bufferr2 = await getBuffer("https://raw.githubusercontent.com/FortOfFans/HSR/main/ascension/1224_March 7th.png);
+        bufferr2 = await getBuffer("https://raw.githubusercontent.com/FortOfFans/HSR/main/ascension/1224_March 7th.png`);
         A17.sendMessage(from, { image: bufferr2, caption: 'ْ' }, { quoted: m });
          
         break
