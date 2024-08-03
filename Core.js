@@ -2274,14 +2274,14 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         break; */
 
 
-      case 'owner': case 'creator': case 'mod': case 'mods': {
+    /*  case 'owner': case 'creator': case 'mod': case 'mods': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
 
         A17.sendMessage(from, { react: { text: "💫", key: m.key } })
         A17.sendContact(m.chat, global.Owner, m)
       }
-        break;
+        break; */
 
 
       case 'addmod':
@@ -13345,7 +13345,7 @@ last login: ${aru.lastLogin}
         A17.sendMessage(from, { react: { text: "✨", key: m.key } })
         const helpmenu = `Hemlo *${pushname}* sensei...!! ${nowtime} ,
   
-     I am "plana" your lovely and cute virtual assistance.
+     I am "plana" your favorite virtual assistance.
 
 
   ⌯    *if you want to add me to your group..just send your group link in dm and wait for your request to be accepted*
@@ -13483,7 +13483,6 @@ last login: ${aru.lastLogin}
   ⌯     ${prefix}𝐡𝐚𝐧𝐝𝐬𝐨𝐦𝐞𝐜𝐡𝐞𝐜𝐤
   ⌯     ${prefix}𝐮𝐠𝐥𝐲𝐜𝐡𝐞𝐜𝐤 
   ⌯     ${prefix}𝐜𝐡𝐚𝐫𝐚𝐜𝐭𝐞𝐫𝐜𝐡𝐞𝐜𝐤
-  ⌯     ${prefix}𝐝𝐢𝐤𝐬𝐢𝐳𝐞
   ⌯     ${prefix}𝐩𝐢𝐜𝐤 
   ⌯     ${prefix}𝐬𝐚𝐲
 
@@ -13498,7 +13497,7 @@ last login: ${aru.lastLogin}
   ⌯     ${prefix}𝐣𝐩 (𝐟𝐨𝐫 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐟𝐠𝐨 𝐣𝐩 𝐬𝐮𝐩𝐩𝐨𝐫𝐭 𝐥𝐢𝐬𝐭) 
   ⌯     ${prefix}𝐧𝐚 (𝐟𝐨𝐫 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐟𝐠𝐨 𝐧𝐚 𝐬𝐮𝐩𝐩𝐨𝐫𝐭 𝐥𝐢𝐬𝐭)
 
-  〢━━━ 💕 *eid Mubarak* 💕 ━━━〢
+  〢━━━ 💕 *have a nice day* 💕 ━━━〢
  
   ⌯    
   ⌯   『  *${global.BotName}*  』
