@@ -429,7 +429,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !isAbu && !isTmone && !isPlana && !isSae  && !isPs && !isHamada && !isMm && !m.isGroup){
          const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=3SmPgvJCJVuTogzZi1OLvkTBb540Eo9rFhbhuTi1jdo&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=pVQqdUcP0i8JzU1EK3ZUWDgggbU94gDH6eeA6FUMSIg&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
         } 
@@ -766,7 +766,7 @@ let media = await A17.downloadAndSaveMediaMessage
     //   } else {
     //   }
 
-    // if (budy.includes("http://")) {
+    // if (budy.includes("http:///")) {
     //     if (!isBotAdmins) return
     //     bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink sent by Admin so no action will be taken!`
     //     if (isAdmins) return reply(bvl)
@@ -1713,10 +1713,6 @@ if (smallinput.includes('مثا')) {
 if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوبري في جعبتك')) {
    reply (`بالله كان هناك يعني؟ من شدة ما صغير ما لاحظت ليهو زاتو`);
 }
-
-    if (smallinput=== '🤏') {
-      reply (`شكلك خبرة يا زولي حتى الاسود بقى ما بكفيك`);
-    }
 
     if (smallinput.includes('pedo') || smallinput.includes('بيدو') || smallinput.includes('شفع')) {
    const imageUrls = [
@@ -3936,7 +3932,7 @@ break;
 	}
 	if (!text.includes("/")) {
         try {  
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=rinIGLNcsHb9wGuAecvA6bhOyS0pYOD4z2cF99rVMi8&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=BIBsE4Okfb93hh7BmIleE8vL6Ofr0Ibh7hbKbfCaiBo&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
