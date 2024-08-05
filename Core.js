@@ -13032,21 +13032,21 @@ last login: ${aru.lastLogin}
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
-        const apk = await axios.get(`https://aemt.me/download/gdrive?url=${encodeURIComponent(q)}`)
-        const fk = apk.data.result;
+        const apk = await axios.get(`https://skizo.tech/api/gdrive?apikey=plana&url=${encodeURIComponent(q)}`)
+        const fk = apk.data.;
         await A17.sendMessage(
           from,
          { 
            text: `\n*Downloading:* *${fk.fileName}*
             
-   *size :* ${fk.fileSize}`,
+   *size :* ${fk.sizeBytes}`,
   },
           { quoted: m }
         );
 
         // Send the audio file with the proper 'type' property set to 'audio'
         await A17.sendMessage(from, {
-          document: {url: fk.data},
+          document: {url: fk.downloadUrl},
           filename: fk.fileName,
           mimetype: 'video/x-matroska',
           quoted: m,
