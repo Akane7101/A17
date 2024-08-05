@@ -9126,9 +9126,23 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
           await A17.sendMessage(from, { image: sx }, { quoted: m })
 	 }
 	 } catch(error) {
+	try {
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1224": "${util.format(anu)}"}`) 
+          buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1224_${q}.png`)
+        await A17.sendMessage(from, { image: buffer }, { quoted: m })
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx = await getBuffer(`https://starraillcard.up.railway.app/card/1224_${q}.png`)
+          await A17.sendMessage(from, { image: sx }, { quoted: m })
+	 }
+	 } catch(error) {
 	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
          A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
         }
+	}
 	}
            break;
 
@@ -12041,7 +12055,7 @@ const imageUrrls = [
                      }, 
 	{
                         "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"acheron","id":"${prefix}card-acheron ${q}"}`
+                        "buttonParamsJson": `{"display_text":"زوجة خطاب","id":"${prefix}card-acheron ${q}"}`
 
                       },
 			    {
