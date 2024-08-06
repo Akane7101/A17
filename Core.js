@@ -1734,8 +1734,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
 
 
     if (smallinput.includes('lmj')) {
-    const safi = fs.readFileSync('./system/towebpauthor.webp')
-    A17.sendMessage(from, { sticker: safi });
+    A17.sendMessage(from, { sticker: { url: `https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=gatadiosv2&img=https://i.postimg.cc/CM34YRFb/photo-2021-02-05-10-13-39.jpg&package=LoL&author=Human` } });
     } 
 
 
