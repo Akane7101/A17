@@ -1733,6 +1733,12 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
     } 
 
 
+    if (smallinput.includes('lmj')) {
+    const safi = fs.readFileSync('./system/towebpauthor.webp')
+    A17.sendMessage(from, { sticker: safi });
+    } 
+
+
     if (smallinput.includes('كلام شنو')) {
      const typ = ['يا توفيق اسكت','everyone says وين المينغودا but no one asks hows the مينغودا', 'هاي'];
    const random = typ[Math.floor(Math.random() * typ.length)];
