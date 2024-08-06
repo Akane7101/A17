@@ -6332,7 +6332,7 @@ break;
         } else if (/image/.test(mime)) {
           let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
-           A17.sendMessage(from, { sticker: { url: `https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=gatadiosv2&img=${util.format(anu)}&package=${pcknm}&author=${atnm}` } });
+           A17.sendMessage(from, { sticker: { url: `https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=gatadiosv2&img=${util.format(anu)}&package=${pcknm}&author=${atnm}`} });
         } else if (/video/.test(mime)) {
           if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds!')
           let media = await quoted.download()
@@ -6345,10 +6345,10 @@ break;
           fs.unlinkSync(media)
           if (err) throw err
           let buffer = fs.readFileSync(ran)
-	   let anu = await GraphOrg(buffer)
-           A17.sendMessage(from, { sticker: { url: `https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=gatadiosv2&img=${util.format(anu)}&package=${pcknm}&author=${atnm}` } })
-	    fs.unlinkSync(ran)
-         })
+        })
+  let anu = await GraphOrg(buffer);
+ A17.sendMessage(from, { sticker: { url: `https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=gatadiosv2&img=${util.format(anu)}&package=${pcknm}&author=${atnm}`} })
+     fs.unlinkSync(ran)
 	 }
 	 }
         break;
