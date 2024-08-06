@@ -6338,10 +6338,17 @@ break;
           let media = await quoted.download()
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
           await fs.unlinkSync(encmedia)
-        } else if (/sticker/.test(mime)) {
-          let media = await quoted.download()
-          A17.sendMessage(from, { sticker: media }, { packname: pcknm, author: atnm }, { quoted: m }); 
-        }
+        } else if (/webp/.test(mime)) {
+	let media = await A17.downloadAndSaveMediaMessage(quoted)
+        let ran = await getRandom('.png')
+        exec(`ffmpeg -i ${media} ${ran}`, (err) => {
+          fs.unlinkSync(media)
+          if (err) throw err
+          let buffer = fs.readFileSync(ran)
+	   let anu = await GraphOrg(buffer);
+           A17.sendMessage(from, { sticker: { url: `https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=gatadiosv2&img=${util.format(anu)}&package=${pcknm}&author=${atnm}` } });
+	    fs.unlinkSync(ran)
+           }
       }
         break;
 
