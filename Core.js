@@ -13031,9 +13031,9 @@ last login: ${aru.lastLogin}
         case 'mkv': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a link`) 
+        if (!text) return reply(`Please provide a link`) 
         const apk = await axios.get(`https://skizo.tech/api/gdrive?apikey=plana&url=${encodeURIComponent(q)}`)
-        const fk = apk.data.;
+        const fk = apk.data;
         await A17.sendMessage(
           from,
          { 
