@@ -6319,19 +6319,20 @@ break;
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
+	let { GraphOrg } = require("./lib/uploader");
 
-        if (!args.join(" ")) return reply(`Like use -take plana|By: حسن زلقو`)
+        if (!args.join(" ")) return reply(`use it like : .take plana/By: حسن زلقو`)
         const swn = args.join(" ")
-        const pcknm = swn.split("|")[0];
-        const atnm = swn.split("|")[1];
+        const pcknm = swn.split("/")[0];
+        const atnm = swn.split("/")[1];
          if (m.quoted.isAnimated === true) {
           let media = await quoted.download()
           let enc = await A17.sendMessage(from, { sticker: media, packname: pcknm }, { quoted: m })
           await fs.unlinkSync(enc)
         } else if (/image/.test(mime)) {
-          let media = await quoted.download()
-          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
-          await fs.unlinkSync(encmedia)
+          let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+           A17.sendMessage(from, { sticker: { url: `https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=gatadiosv2&img=${util.format(anu)}&package=${pcknm}&author=${atnm}` } });
         } else if (/video/.test(mime)) {
           if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds!')
           let media = await quoted.download()
