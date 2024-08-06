@@ -6345,8 +6345,8 @@ break;
           fs.unlinkSync(media)
           if (err) throw err
           let buffer = fs.readFileSync(ran)
-	   let anu = await GraphOrg(buffer);
-           A17.sendMessage(from, { sticker: { url: `https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=gatadiosv2&img=${util.format(anu)}&package=${pcknm}&author=${atnm}` } });
+	   let anu = await GraphOrg(buffer)
+           A17.sendMessage(from, { sticker: { url: `https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=gatadiosv2&img=${util.format(anu)}&package=${pcknm}&author=${atnm}` } })
 	    fs.unlinkSync(ran)
          })
 	 }
