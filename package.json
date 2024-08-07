@@ -112,6 +112,6 @@
         "xfarr-api": "^1.0.3",
         "yargs": "^17.7.2",
         "youtube-yts": "^2.0.0",
-        "youtubedl-core": "^4.11.7"
+        "youtubedl-core": "^4.11.5"
     }
 }
